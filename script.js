@@ -1,29 +1,41 @@
-import './js/ui.js';
-import './js/storage.js';
-
-
-
-// View notes
+import "./js/ui.js";
+import "./js/storage.js";
 
 /* =========================
 View notes
 ========================= */
-let notes = ['banana', 'rasen mähen'];
+let notes = ["banana", "rasen mähen"];
 
-function renderNotes() {
+window.renderNotes = function () {
+  let contentRef = document.getElementById("content");
+  contentRef.innerHTML = "";
 
-    let contentRef = document.getElementById("content");
+  for (let indexNote = 0; indexNote < notes.length; indexNote++) {
+    const note = notes[indexNote];
 
-  for (let  i  = 0;  i  < array.length;  i ++) {
-    const element = array[ i ];
-      contentRef.innerHTML = notes;
+    contentRef.innerHTML += getNoteTemplate(note);
   }
+};
+
+function getNoteTemplate(note) {
+  return `<p class="note">${note}</p>`;
 }
 
-renderNotes();
+/* =========================
+add notes
+========================= */
 
+window.addNotes = function () {
+  let noteInputRef = document.getElementById("note_Input");
 
+  let noteInput = noteInputRef.value;
 
-// add notes
+  notes.push(noteInput);
+
+  renderNotes();
+
+  noteInputRef.value = "";
+};
+
 // delete notes
 // archives notes

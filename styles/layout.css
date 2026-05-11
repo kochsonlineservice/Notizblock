@@ -1,4 +1,6 @@
 button{
-    height: 20px;
-    background-color: red;
+   
+    height: 30px;
+    background-color: lightgray;
+    align-items: center;
 }
