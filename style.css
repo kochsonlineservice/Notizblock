@@ -12,6 +12,10 @@
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* =========================
@@ -27,4 +31,11 @@
 
 input{
     margin-right: 10px;
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
