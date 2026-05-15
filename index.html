@@ -30,12 +30,21 @@
 
 
     <div class="input-button">
-      <input id="note_Input" type="text" />
+      <input id="note_Input"
+      type="text" 
+      onkeydown="handleEnter(event)"/>
       <button onclick="addNotes()">Notiz speichern</button>
     </div>
 
     <div id="content">
-      <p>+ rasen mähen</p>
+      
+    </div>
+
+<div class="trash">
+  <h2>Papierkorb</h2>
+    <div id="trash_content">
+        
+    </div>
     </div>
 
     <script type="module" src="./script.js"></script>
